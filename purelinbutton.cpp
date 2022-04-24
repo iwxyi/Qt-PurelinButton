@@ -82,7 +82,7 @@ void PurelinButton::paintEvent(QPaintEvent *)
         if ((line.length() < 1e-4))
             continue;
 
-        painter.setPen(QPen(currentStatus.lineColors[i], penWidth));
+        painter.setPen(QPen(currentStatus.lineColors[i], penWidth, Qt::SolidLine, Qt::RoundCap));
         painter.drawLine(currentStatus.linePoss[i]);
     }
 }
