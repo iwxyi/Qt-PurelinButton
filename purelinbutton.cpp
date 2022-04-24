@@ -51,6 +51,7 @@ void PurelinButton::load(PurelinStatus status)
     ani->setStartValue(0.0);
     ani->setEndValue(1.0);
     ani->setDuration(500);
+    ani->setEasingCurve(QEasingCurve::OutQuad);
     connect(ani, &QPropertyAnimation::valueChanged, this, &PurelinButton::aniProgChanged);
     connect(ani, SIGNAL(finished()), ani, SLOT(deleteLater()));
     connect(ani, SIGNAL(finished()), this, SLOT(aniProgFinished()));

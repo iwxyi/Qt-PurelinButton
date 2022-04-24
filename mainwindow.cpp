@@ -1,12 +1,19 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QGraphicsDropShadowEffect>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    QGraphicsDropShadowEffect *shadow = new QGraphicsDropShadowEffect(this);
+    shadow->setOffset(3, 5);
+    shadow->setColor(QColor("#44888888"));
+    shadow->setBlurRadius(20);
+    ui->pushButton->setGraphicsEffect(shadow);
 }
 
 MainWindow::~MainWindow()
@@ -38,8 +45,8 @@ void MainWindow::on_pushButton_clicked()
     status[i].bgColor = Qt::white;
     status[i].bgRadius = 30;
     status[i].useLine = 2;
-    status[i].linePoss[0] = QLineF(50, 35, 50, 65);
-    status[i].linePoss[1] = QLineF(35, 50, 65, 50);
+    status[i].linePoss[0] = QLineF(35, 50, 65, 50);
+    status[i].linePoss[1] = QLineF(50, 65, 50, 35);
     status[i].lineHide[0] = QPointF(50, 50);
     status[i].lineHide[1] = QPointF(50, 50);
     status[i].lineColors[0] = QColor("#5baaf8");
@@ -79,8 +86,8 @@ void MainWindow::on_pushButton_clicked()
     status[i].bgColor = Qt::white;
     status[i].bgRadius = 50;
     status[i].useLine = 2;
-    status[i].linePoss[0] = QLineF(42 + dx, 50, 58 + dx, 35);
-    status[i].linePoss[1] = QLineF(42 + dx, 50, 58 + dx, 65);
+    status[i].linePoss[0] = QLineF(42 + dx, 50, 58 + dx, 65);
+    status[i].linePoss[1] = QLineF(42 + dx, 50, 58 + dx, 35);
     status[i].lineHide[0] = QPointF(50, 50);
     status[i].lineHide[1] = QPointF(50, 50);
     status[i].lineColors[0] = QColor("#4b6fea");
@@ -92,10 +99,10 @@ void MainWindow::on_pushButton_clicked()
     status[i].bgColor = Qt::white;
     status[i].bgRadius = 30;
     status[i].useLine = 2;
-    status[i].linePoss[0] = QLineF(35, 45, 65, 45);
-    status[i].linePoss[1] = QLineF(35, 55, 65, 55);
-    status[i].lineHide[0] = QPointF(50, 45);
-    status[i].lineHide[1] = QPointF(50, 55);
+    status[i].linePoss[0] = QLineF(35, 55, 65, 55);
+    status[i].linePoss[1] = QLineF(35, 45, 65, 45);
+    status[i].lineHide[0] = QPointF(50, 55);
+    status[i].lineHide[1] = QPointF(50, 45);
     status[i].lineColors[0] = QColor("#eda244");
     status[i].lineColors[1] = QColor("#eda244");
 
@@ -105,14 +112,14 @@ void MainWindow::on_pushButton_clicked()
     status[i].bgColor = Qt::white;
     status[i].bgRadius = 20;
     status[i].useLine = 3;
-    status[i].linePoss[0] = QLineF(34, 37, 66, 37);
-    status[i].linePoss[1] = QLineF(40, 50, 60, 50);
+    status[i].linePoss[1] = QLineF(34, 37, 66, 37);
+    status[i].linePoss[0] = QLineF(40, 50, 60, 50);
     status[i].linePoss[2] = QLineF(46, 63, 54, 63);
-    status[i].lineHide[0] = QPointF(50, 37);
-    status[i].lineHide[1] = QPointF(50, 50);
+    status[i].lineHide[1] = QPointF(50, 37);
+    status[i].lineHide[0] = QPointF(50, 50);
     status[i].lineHide[2] = QPointF(50, 63);
-    status[i].lineColors[0] = QColor("#7248e3");
     status[i].lineColors[1] = QColor("#7248e3");
+    status[i].lineColors[0] = QColor("#7248e3");
     status[i].lineColors[2] = QColor("#7248e3");
 
     // ≡
@@ -121,14 +128,14 @@ void MainWindow::on_pushButton_clicked()
     status[i].bgColor = Qt::white;
     status[i].bgRadius = 20;
     status[i].useLine = 3;
-    status[i].linePoss[0] = QLineF(35, 37, 65, 37);
-    status[i].linePoss[1] = QLineF(35, 50, 55, 50);
+    status[i].linePoss[1] = QLineF(35, 37, 65, 37);
+    status[i].linePoss[0] = QLineF(35, 50, 55, 50);
     status[i].linePoss[2] = QLineF(35, 63, 60, 63);
-    status[i].lineHide[0] = QPointF(35, 37);
-    status[i].lineHide[1] = QPointF(35, 50);
+    status[i].lineHide[1] = QPointF(35, 37);
+    status[i].lineHide[0] = QPointF(35, 50);
     status[i].lineHide[2] = QPointF(35, 63);
-    status[i].lineColors[0] = QColor("#424649");
     status[i].lineColors[1] = QColor("#424649");
+    status[i].lineColors[0] = QColor("#424649");
     status[i].lineColors[2] = QColor("#424649");
 
 

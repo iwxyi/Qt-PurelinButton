@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>365</width>
-    <height>212</height>
+    <width>360</width>
+    <height>268</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="PurelinButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>20</y>
+      <x>120</x>
+      <y>60</y>
       <width>100</width>
       <height>100</height>
      </rect>
@@ -33,7 +33,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>365</width>
+     <width>360</width>
      <height>23</height>
     </rect>
    </property>
